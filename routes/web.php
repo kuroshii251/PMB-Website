@@ -1,0 +1,60 @@
+<?php
+
+use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\DaftarUlangController;
+use App\Http\Controllers\FormController;
+use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\showController;
+use App\Http\Controllers\SoalController;
+use Illuminate\Support\Facades\Route;
+use PHPUnit\Framework\Attributes\Group;
+
+Route::middleware('auth')->group(function () {
+    Route::get('/dashboard', [showController::class, 'dashboard']);
+    Route::get('/soals', [SoalController::class, 'index']);
+    Route::get('/soal/{id}', [SoalController::class, 'show']);
+    Route::post('/soal/{id}', [SoalController::class, 'jawaban']);
+    Route::get('/soal/{id}', [SoalController::class, 'shows']);
+    Route::get('/berhasilpayment', [showController::class, 'showss']);
+    Route::get('/ktm', [showController::class, 'ktm']);
+    Route::get('/ktm', [showController::class, 'showKtm']);
+    Route::get('/masukgrup', [showController::class, 'masukgrup']);
+    Route::get('/result', [SoalController::class, 'cekResult']);
+    Route::get('/form', [FormController::class, 'create']);
+    Route::post('/form', [FormController::class, 'store'])->name('simpan');
+    Route::get('/berhasilujian', [showController::class, 'showUjian']);
+    Route::get('/payment', [PaymentController::class, 'index']);
+    Route::post('/payment', [PaymentController::class, 'store']);
+    Route::get('/lulus', [showController::class, 'showLulus']);
+    Route::get('/tidaklulus', [showController::class, 'showTidakLulus']);
+    Route::get('/berhasilform', [showController::class, 'berhasilform']);
+    Route::get( '/halamanadmin/daftarulang', [DaftarUlangController::class, 'index']);
+    Route::post('/daftarulang/{id}', [DaftarUlangController::class, 'tambahNim'])->name('tambahNim');
+    Route::get('/daftarulangform', [DaftarUlangController::class, 'show']);
+    Route::post('/daftarulang', [DaftarUlangController::class, 'store'])->name('simpandokumen');
+    Route::get('/daftarulang', [DaftarUlangController::class, 'index']);
+    Route::get('/halamanadmin/daftaruser', [showController::class, 'showUser']);
+    Route::get('/halamanadmin/daftarform', [FormController::class, 'showForm']);
+    Route::post('/halamanadmin/daftarform/{id}', [FormController::class, 'update']);
+    Route::get('/halamanadmin/daftarform/delete/{id}', [FormController::class, 'destroy']);
+    Route::get('/halamanadmin/hasildaftarulang', [DaftarUlangController::class, 'show']);
+    Route::get('/halamanadmin/hasilujian', [SoalController::class, 'hasilujian']);
+    Route::post('/hasil/lulus/{id}', [SoalController::class, 'tambahStatusLulus']);
+    Route::post('/hasil/tidaklulus/{id}', [SoalController::class, 'tambahStatusTidakLulus']);
+    Route::get('/halamanadmin/daftarsoal', [SoalController::class, 'showSoal']);
+    Route::delete('/halamanadmin/soal/delete/{id}', [SoalController::class, 'destroy']);
+    Route::get( '/halamanadmin', [showController::class, 'showComponent']);
+    Route::get('/halamanadmin/soal/tambah', [SoalController::class, 'create']);
+    Route::post('/halamanadmin/soal/tambah', [SoalController::class, 'store'])->name('tambah');
+    Route::put('/halamanadmin/soal/update/{id}', [SoalController::class, 'update'])->where('id', '[0-9]+');
+    Route::get('/logout', [AuthController::class, 'Logout']);
+});
+
+    Route::get('/error', [showController::class, 'showError']);
+    Route::get('/', [SoalController::class, 'main']);
+    Route::get('/login', [AuthController::class, 'showLogin']);
+    Route::post('/login', [AuthController::class, 'Login'])->name('login');
+    Route::get('/register', [AuthController::class, 'showRegister']);
+    Route::post('/register', [AuthController::class, 'Register'])->name('register');
+    Route::get('/loginadmin', [AuthController::class, 'showLoginAdmin']);
+    Route::post('/loginadmin', [AuthController::class, 'LoginAdmin']);
