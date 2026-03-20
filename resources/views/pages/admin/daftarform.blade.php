@@ -68,7 +68,23 @@
         </nav>
     </aside>
 
-   <main class="p-10 bg-gray-50 min-h-screen">
+<main class="p-10 bg-gray-50 min-h-screen">
+@if (session('success'))
+  <div class="mb-4 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">
+    {{ session('success') }}
+  </div>
+@endif
+
+@if ($errors->any())
+  <div class="mb-4 p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg">
+    <ul class="list-disc list-inside">
+      @foreach ($errors->all() as $error)
+        <li>{{ $error }}</li>
+      @endforeach
+    </ul>
+  </div>
+@endif
+
   <div class="flex justify-end items-center bg-white shadow-sm rounded-2xl p-4 mb-10">
     <div class="flex items-center space-x-3 text-gray-600">
       <i class="fa-solid fa-user text-lg"></i>
@@ -106,7 +122,6 @@
                 {{ $item->nomor_telepon }}
             </p>
 
-            <!-- Foto -->
             <div class="pt-3">
                 <p class="font-semibold mb-2">Foto Pas:</p>
                 <img
@@ -116,12 +131,26 @@
                 >
             </div>
 
-            <!-- Buttons -->
+            <div class="pt-3">
+                <p class="font-semibold mb-2">Bukti Pembayaran:</p>
+                @php $paymentPhoto = $item->user->payments->first()?->foto_payment ?? null; @endphp
+                @if($paymentPhoto)
+                <img
+                    src="{{ asset('uploads/payment/' . $paymentPhoto) }}"
+                    alt="Bukti Pembayaran"
+                    class="w-32 h-40 object-cover rounded-lg border shadow-sm"
+                >
+                @else
+                <p class="text-gray-500 text-sm">Belum ada bukti pembayaran</p>
+                @endif
+            </div>
+
             <div class="flex gap-3 pt-4">
                 <button
-                    onclick="openModal(
+onclick="openModal(
                         '{{ $item->id }}',
                         '{{ $item->nama }}',
+                        '{{ $item->email }}',
                         '{{ $item->jurusan }}',
                         '{{ $item->jenis_kelamin }}',
                         '{{ $item->tempat_lahir }}',
@@ -132,7 +161,7 @@
                         '{{ $item->agama }}',
                         '{{ $item->nomor_telepon }}',
                         '{{ $item->foto_pas }}',
-                        '{{ $item->foto_payment }}'
+                        '{{ $item->user->payments->first()?->foto_payment ?? "" }}'
                     )"
                     class="flex-1 bg-blue-500 hover:bg-blue-600 text-white py-2 rounded-lg text-sm font-medium transition duration-200"
                 >
@@ -154,43 +183,105 @@
 
 </div>
 
-<div id="editModal" class="fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center z-50">
-    <div class="bg-white w-full max-w-2xl p-6 rounded-xl shadow-lg relative">
+<div id="editModal" class="fixed inset-0 bg-black/50 hidden justify-center items-center z-50">
 
-        <h2 class="text-xl font-semibold mb-4">Edit Data</h2>
+    <div class="bg-white w-full max-w-3xl rounded-2xl shadow-xl relative max-h-[90vh] overflow-y-auto p-6">
+        <h2 class="text-2xl font-semibold mb-6 text-gray-800">Edit Data</h2>
 
-        <form id="editForm" method="POST">
-            @csrf
-            @method('POST')
+        <form id="editForm" method="POST" class="space-y-4" enctype="multipart/form-data">
+@csrf
 
             <input type="hidden" id="edit_id">
+            <input type="hidden" name="email" id="edit_email">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 shadow-sm shadow-black rounded-2xl p-3">
 
-            <div class="grid grid-cols-2 gap-4">
+<label for="">Nama</label>
 
-                <input type="text" name="nama" id="edit_nama" class="border p-2 rounded" placeholder="Nama">
-                <input type="text" name="jurusan" id="edit_jurusan" class="border p-2 rounded" placeholder="Jurusan">
-                <input type="text" name="jenis_kelamin" id="edit_jenis_kelamin" class="border p-2 rounded" placeholder="Jenis Kelamin">
-                <input type="text" name="tempat_lahir" id="edit_tempat_lahir" class="border p-2 rounded" placeholder="Tempat Lahir">
-                <input type="date" name="tanggal_lahir" id="edit_tanggal_lahir" class="border p-2 rounded">
-                <input type="text" name="asal_sekolah" id="edit_asal_sekolah" class="border p-2 rounded" placeholder="Asal Sekolah">
-                <input type="text" name="nisn" id="edit_nisn" class="border p-2 rounded" placeholder="NISN">
-                <input type="text" name="nik" id="edit_nik" class="border p-2 rounded" placeholder="NIK">
-                <input type="text" name="agama" id="edit_agama" class="border p-2 rounded" placeholder="Agama">
-                <input type="text" name="nomor_telepon" id="edit_nomor_telepon" class="border p-2 rounded" placeholder="Nomor Telepon">
-                <img id="preview_foto_pas" class="w-32 mb-2">
-<img id="preview_foto_payment" class="w-32 mb-2">
+                <input type="text" name="nama" id="edit_nama"
+                    class="input-style" placeholder="Nama">
 
+<label for="">Jurusan</label>
+
+
+                <input type="text" name="jurusan" id="edit_jurusan"
+                    class="input-style" placeholder="Jurusan">
+<label for="">Jenis Kelamin</label>
+
+
+                <input type="text" name="jenis_kelamin" id="edit_jenis_kelamin"
+                    class="input-style" placeholder="Jenis Kelamin">
+
+<label for="">Tempat Lahir</label>
+
+
+                <input type="text" name="tempat_lahir" id="edit_tempat_lahir"
+                    class="input-style" placeholder="Tempat Lahir">
+
+<label for="">Tanggal Lahir</label>
+
+
+                <input type="date" name="tanggal_lahir" id="edit_tanggal_lahir"
+                    class="input-style">
+
+<label for="">Asal Sekolah</label>
+
+
+                <input type="text" name="asal_sekolah" id="edit_asal_sekolah"
+                    class="input-style" placeholder="Asal Sekolah">
+
+<label for="">NISN</label>
+
+
+                <input type="text" name="nisn" id="edit_nisn"
+                    class="input-style" placeholder="NISN">
+
+<label for="">NIK</label>
+
+
+                <input type="text" name="nik" id="edit_nik"
+                    class="input-style" placeholder="NIK">
+
+<label for="">Agama</label>
+
+
+                <input type="text" name="agama" id="edit_agama"
+                    class="input-style" placeholder="Agama">
+<label for="">Nomor Telepon</label>
+
+
+                <input type="text" name="nomor_telepon" id="edit_nomor_telepon"
+                    class="input-style" placeholder="Nomor Telepon">
+
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+
+                <div class="upload-box shadow-sm shadow-black p-3 rounded-2xl">
+                    <p class="text-sm font-medium text-gray-600 mb-2">Foto Pas</p>
+                    <img id="preview_foto_pas"
+                        class="w-32 h-32 object-cover rounded-lg border mb-3 bg-gray-100">
+                    <input type="file" name="foto_pas" id="edit_foto_pas"
+                        class="file-style">
+                </div>
+
+                <div class="upload-box shadow-sm shadow-black p-3 rounded-2xl">
+                    <p class="text-sm font-medium text-gray-600 mb-2">Bukti Pembayaran</p>
+                    <img id="preview_foto_payment"
+                        class="w-32 h-32 object-cover rounded-lg border mb-3 bg-gray-100">
+                    <input type="file" name="foto_payment" id="edit_foto_payment"
+                        class="file-style">
+                </div>
 
             </div>
 
             <div class="flex justify-end gap-3 mt-6">
                 <button type="button" onclick="closeModal()"
-                    class="px-4 py-2 bg-gray-400 text-white rounded">
+                    class="px-4 py-2 bg-gray-400 hover:bg-gray-500 text-white rounded-lg transition">
                     Batal
                 </button>
 
                 <button type="submit"
-                    class="px-4 py-2 bg-green-600 text-white rounded">
+                    class="px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg transition">
                     Simpan
                 </button>
             </div>
@@ -200,9 +291,11 @@
 </div>
 
 <script>
-function openModal(id, nama, jurusan, jenis_kelamin, tempat_lahir, tanggal_lahir, asal_sekolah, nisn, nik, agama, nomor_telepon, foto_pas, foto_payment) {
+function openModal(id, nama, email, jurusan, jenis_kelamin, tempat_lahir, tanggal_lahir, asal_sekolah, nisn, nik, agama, nomor_telepon, foto_pas, foto_payment) {
 
     document.getElementById('editForm').action = "/halamanadmin/daftarform/" + id;
+
+    document.getElementById('edit_email').value = email;
 
     document.getElementById('edit_nama').value = nama;
     document.getElementById('edit_jurusan').value = jurusan;
@@ -219,8 +312,11 @@ function openModal(id, nama, jurusan, jenis_kelamin, tempat_lahir, tanggal_lahir
     document.getElementById('preview_foto_pas').src =
         "/uploads/image/foto_pas/" + foto_pas;
 
-    document.getElementById('preview_foto_payment').src =
-        "/uploads/image/foto_payment/" + foto_payment;
+    if (foto_payment) {
+        document.getElementById('preview_foto_payment').src = "/uploads/payment/" + foto_payment;
+    } else {
+        document.getElementById('preview_foto_payment').src = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTI4IiBoZWlnaHQ9IjEyOCIgdmlld0JveD0iMCAwIDEyOCAxMjgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0zIDBoMTI4VjEyOEgzWiIgZmlsbD0iI0UzRTNFMyIvPgo8L3N2Zz4K";
+    }
 
     document.getElementById('editModal').classList.remove('hidden');
     document.getElementById('editModal').classList.add('flex');

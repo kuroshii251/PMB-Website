@@ -33,7 +33,7 @@
     <div class="max-w-6xl mx-auto flex items-center justify-between px-6 py-5">
 
         <div class="flex items-center">
-            <img src="binus3.svg" alt="logo" class="h-12">
+            <img src="binus3.png" alt="logo" class="h-20">
         </div>
 
         <div class="flex items-center space-x-8 text-lg font-semibold text-gray-700">

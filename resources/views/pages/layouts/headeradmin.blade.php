@@ -26,9 +26,8 @@
 <div class="grid grid-cols-[260px_1fr] min-h-screen bg-gray-100">
 
     <aside class="bg-black text-gray-400 p-8 space-y-8">
-<div class="aspect-square bg-white rounded-full size-15 mx-auto">
-        <img src="binus3.svg" class="size-12 mb-10 mx-auto" alt="">
-
+<div class="aspect-square bg-white rounded-full size-15 mx-auto flex items-center justify-center">
+    <img src="binus3.png" class="w-100" alt="">
 </div>
         <nav class="space-y-8 text-sm m-5">
 

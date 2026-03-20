@@ -90,7 +90,7 @@
         </thead>
 
         <tbody class="divide-y divide-gray-200">
-            @foreach($datas as $item)
+@foreach($datas as $item)
                 <tr class="hover:bg-gray-50 transition duration-200">
 
                     <td class="px-6 py-4 font-semibold text-gray-800">
@@ -116,7 +116,8 @@
 
                     <td class="px-6 py-4">
                         <div class="flex gap-3 justify-center">
-<form action="/hasil/lulus/{{ $item->id }}" method="POST">    @csrf
+<form action="/hasil/lulus/{{ $item->id }}" method="POST">
+    @csrf
     <button type="submit"
         class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg text-xs font-semibold shadow transition">
         Lulus
@@ -124,7 +125,7 @@
 </form>
 
 <form action="/hasil/tidaklulus/{{ $item->id }}" method="POST">
-        @csrf
+    @csrf
     <button type="submit"
         class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg text-xs font-semibold shadow transition">
         Tidak Lulus

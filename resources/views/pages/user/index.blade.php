@@ -26,17 +26,16 @@
 
 <body class="open-sans">
     <div class="flex">
-        <div class="flex flex-1 mt-0 pt-0  m-0">
-            <img src="bendera.png" class="pl-10 w-20" alt="">
-            <a href="/">
-                <img src="binus3.svg" class="pl-10" alt="">
+      <div class="flex flex-1 items-center m-0">
+    <img src="bendera.png" class="pl-10 h-25 w-auto object-contain" alt="">
 
-            </a>
-
-        </div>
+    <a href="/">
+        <img src="binus3.png" class="pl-2 h-25 w-auto object-contain" alt="">
+    </a>
+</div>
         <div class="justify-end flex space-x-1 pr-10 items-end ">
 
-            <img src="Binus Logo.svg" class="size-12 mr-10" alt="">
+            <img src="binus Logo.svg" class="size-12 mr-10" alt="">
             <a href="/login">
                 <div class="bg-blue-500 w-30 rounded-l-4xl size-10">
 
@@ -93,16 +92,16 @@
     <div class="p-5  h-150 flex "id="about">
         <div class="grid grid-cols-2 p-5 pt-10 place-items-center">
             <div class="justify-center items-center">
-                <h1 class="text-4xl font-black mb-5">ABOUT BINUS UNIVERSITY</h1>
-                <p class="font-normal text-sm">BINUS University adalah Institusi Pendidikan Tinggi Indonesia bertaraf
+                <h1 class="text-4xl font-black mb-5">ABOUT BIPRES UNIVERSITY</h1>
+                <p class="font-normal text-sm">BIPRES University adalah Institusi Pendidikan Tinggi Indonesia bertaraf
                     dunia yang telah meraih akreditasi Unggul dari BAN-PT dan berada di peringkat 10 besar universitas
-                    terbaik di Indonesia menurut World University Ranking 2026. Selain itu, BINUS University juga
-                    mendapat predikat universitas bintang 5 menurut QS University Ranking. BINUS University tidak hanya
-                    membekali Binusian dengan pengalaman belajar di kampus tetapi juga memberikan pengalaman langsung di
+                    terbaik di Indonesia menurut World University Ranking 2026. Selain itu, BIPRES University juga
+                    mendapat predikat universitas bintang 5 menurut QS University Ranking. BIPRES University tidak hanya
+                    membekali BIPRESian dengan pengalaman belajar di kampus tetapi juga memberikan pengalaman langsung di
                     industri. Komitmen ini diwujudkan melalui program (2+1)+1, yang mencakup 2 tahun belajar di kampus
-                    asal, 1 tahun di kampus BINUS lain di kota yang berbeda, dan 1 tahun dalam salah satu dari 7 program
+                    asal, 1 tahun di kampus BIPRES lain di kota yang berbeda, dan 1 tahun dalam salah satu dari 7 program
                     enrichment, yaitu: Magang, Pengabdian Masyarakat, Penelitian, Kewirausahaan, Studi ke Luar Negeri,
-                    Studi Mandiri Khusus, dan Studi Lanjutan. Program ini mempersiapkan BINUSIAN untuk menjadi individu
+                    Studi Mandiri Khusus, dan Studi Lanjutan. Program ini mempersiapkan BIPRESIAN untuk menjadi individu
                     yang lebih kompeten dan siap bersaing di dunia profesional global sesuai bidang pilihan dan aspirasi
                     masa depan mereka.</p>
 
@@ -118,7 +117,7 @@
             ACHIEVEMENT
         </h1>
         <h1 class="m-0 leading-none text-5xl font-bold">
-            BINUS UNIVERSITY
+            BIPRES UNIVERSITY
         </h1>
 
         <img src="wur.svg" class="block mt-10 mb-5 w-200 mx-auto" alt="">
@@ -130,7 +129,7 @@
     <div class="bg-[#0097da] p-4">
         <div class="flex justify-center items-center flex-col h-30">
             <h1 class="text-white text-3xl">Mengapa Memilih</h1>
-            <h1 class="text-white text-5xl font-extrabold">BINUS UNIVERSITY?</h1>
+            <h1 class="text-white text-5xl font-extrabold">BIPRES UNIVERSITY?</h1>
 
         </div>
         <div class="grid grid-cols-3 space-x-2 space-y-3 pt-10 place-items-center ">
@@ -141,7 +140,7 @@
                 <div class="text-center p-3">
                     <h1 class="font-bold text-xl mt-3 mb-2">(2+1)+1 Program</h1>
                     <p class="text-xs w-70 font-normal">Mahasiswa akan menjalani 2 tahun kuliah di kampus asal, 1 tahun
-                        kuliah di kampus BINUS di kota lain, dan 1 tahun mengambil salah satu dari 7 program enrichment.
+                        kuliah di kampus BIPRES di kota lain, dan 1 tahun mengambil salah satu dari 7 program enrichment.
                     </p>
                 </div>
 
@@ -153,7 +152,7 @@
                 <div class="text-center p-3">
                     <h1 class="font-bold text-xl mt-3 mb-2">Global Career & <br>Entrepreneurship Opportunity
                     </h1>
-                    <p class="text-xs w-80 mx-auto font-normal">BINUS University mengantar 2 dari 3 lulusannya untuk
+                    <p class="text-xs w-80 mx-auto font-normal">BIPRES University mengantar 2 dari 3 lulusannya untuk
                         bekerja di perusahaan multinasional atau berwirausaha.
                     </p>
                 </div>
@@ -166,7 +165,7 @@
                 <div class="text-center">
 
                     <h1 class="font-bold text-xl mt-3 mb-2">Internationalization</h1>
-                    <p class="text-xs font-normal w-80">BINUS University mempersiapkan beragam program dan kegiatan
+                    <p class="text-xs font-normal w-80">BIPRES University mempersiapkan beragam program dan kegiatan
                         internasionalisasi untuk membekali kamu dengan pengalaman internasional.</p>
                 </div>
 
@@ -177,7 +176,7 @@
                 </div>
                 <div class="text-center">
                     <h1 class="font-bold text-xl mt-3 mb-2">Minor Program</h1>
-                    <p class="text-xs w-80">BINUS memungkinkan mahasiswa memiliki fleksibilitas dalam mengembangkan
+                    <p class="text-xs w-80">BIPRES memungkinkan mahasiswa memiliki fleksibilitas dalam mengembangkan
                         potensi akademik sesuai passion-nya.</p>
                 </div>
 
@@ -188,7 +187,7 @@
                 </div>
                 <div class="text-center">
                     <h1 class="font-bold text-xl mt-3 mb-2">Global Opportunities</h1>
-                    <p class="text-xs w-80">BINUS University membekali mahasiswa dengan pengalaman dengan berbagai
+                    <p class="text-xs w-80">BIPRES University membekali mahasiswa dengan pengalaman dengan berbagai
                         kegiatan baik di dalam maupun luar negeri</p>
                 </div>
 
@@ -202,18 +201,18 @@
     <div class="h-300 shadow bg-slate-50 rounded-xl items-center m-8 shadow-black justify-center flex-1 ">
         <div class="grid grid-cols-2 p-10 place-content-center gap-12">
             <div class=" w-400">
-                <img src="{{ asset('Binuskemanggisan.avif') }}" class="rounded-xl " alt="">
+                <img src="{{ asset('binuskemanggisan.avif') }}" class="rounded-xl " alt="">
             </div>
             <div class="ml-5">
-                <h1 class="font-bold text-4xl">BINUS @Kemanggisan</h1>
+                <h1 class="font-bold text-4xl">BIPRES @Kemanggisan</h1>
                 <div class="mb-2 mt-2">
                     <a href="https://maps.app.goo.gl/amnEz4FTHVSbb2vU6" class="text-black text-md text-decoration-none">Jl. Raya Kb. Jeruk No.27, RT.1/RW.9, Kemanggisan, Kec. Palmerah, Kota Jakarta Barat</a>
 
                 </div>
                 <p class="font-thin text-sm">Kampus ini tersebar di Kampus Anggrek, Kampus Syahdan, Kampus Kijang, dan
-                    BINUS Square. Dengan program akademik yang berorientasi pada industri, kampus ini bertujuan untuk
+                    BIPRES Square. Dengan program akademik yang berorientasi pada industri, kampus ini bertujuan untuk
                     menciptakan lulusan yang siap berkontribusi dalam dunia kerja dan masyarakat. Niat dan tujuan inilah
-                    yang tercermin dalam tagline Binus Kemanggisan, "KITA: Kemanggisan Inovasi Tanpa Akhir."</p>
+                    yang tercermin dalam tagline BIPRES Kemanggisan, "KITA: Kemanggisan Inovasi Tanpa Akhir."</p>
                 <h1 class="font-bold text-2xl mt-5">
                     FAKULTAS
                 </h1>
@@ -238,7 +237,7 @@
         </div>
         <div class="bg-white text-center mt-5 p-3">
             <h1 class="text-5xl font-bold">PROGRAMS</h1>
-            <p class="font-normal text-xl">BINUS @Kemanggisan</p>
+            <p class="font-normal text-xl">BIPRES @Kemanggisan</p>
         </div>
         <div class="grid grid-cols-3 place-content-center p-5">
             <div class="p-3 h-100 border-r-2 border-gray-300">
@@ -292,7 +291,7 @@
 
             <div class="p-3 h-100m-5">
                 <div class="pt-5">
-                    <h1 class="font-black text-xl">BINUS BUSINESS SCHOOL <br>(UNDERGRADUATE)</h1>
+                    <h1 class="font-black text-xl">BIPRES BUSINESS SCHOOL <br>(UNDERGRADUATE)</h1>
                     <ul>
                         <li> Global Business Marketing
                         </li>
@@ -319,14 +318,14 @@
         <div class="grid grid-cols-2 p-10 place-content-center gap-12">
 
             <div class="">
-                <h1 class="font-bold text-4xl">BINUS @Alam Sutera</h1>
+                <h1 class="font-bold text-4xl">BIPRES @Alam Sutera</h1>
 <div class="mb-2 mt-2">
                     <a href="https://maps.app.goo.gl/nG2TpYJpjni9Md1Z7" class="text-black text-md text-decoration-none">Jl. Jalur Sutera Bar. No.Kav. 21, Panunggangan, Kec. Pinang, Kota Tangerang, Banten</a>
-                </div>                 <p class="font-thin text-sm">BINUS @Alam Sutera, yang terletak di Tangerang, adalah salah satu pusat
+                </div>                 <p class="font-thin text-sm">BIPRES @Alam Sutera, yang terletak di Tangerang, adalah salah satu pusat
                     pendidikan terkemuka yang dikenal dengan fasilitas modern dan lingkungan akademik yang canggih.
                     Kampus ini menginspirasi mahasiswa dalam mengejar pengetahuan dan pengembangan diri. Dengan
                     kurikulum internasional berstandar tinggi, didukung oleh dosen yang kompeten serta teknologi
-                    mutakhir, BINUS @Alam Sutera menciptakan lingkungan belajar yang inovatif dan dinamis</p>
+                    mutakhir, BIPRES @Alam Sutera menciptakan lingkungan belajar yang inovatif dan dinamis</p>
                 <h1 class="font-bold text-2xl mt-5">
                     FAKULTAS
                 </h1>
@@ -354,7 +353,7 @@
         </div>
         <div class="bg-white text-center mt-5">
             <h1 class="text-5xl font-bold">PROGRAMS</h1>
-            <p class="font-normal text-xl">BINUS @Kemanggisan</p>
+            <p class="font-normal text-xl">BIPRES @Kemanggisan</p>
         </div>
         <div class="grid grid-cols-3 place-content-center p-5">
             <div class="p-3 h-100 border-r-2 border-gray-300">
@@ -408,7 +407,7 @@
 
             <div class="p-3 h-100m-5">
                 <div class="pt-5">
-                    <h1 class="font-black text-xl">BINUS BUSINESS SCHOOL <br>(UNDERGRADUATE)</h1>
+                    <h1 class="font-black text-xl">BIPRES BUSINESS SCHOOL <br>(UNDERGRADUATE)</h1>
                     <ul>
                         <li> Global Business Marketing
                         </li>
@@ -434,15 +433,15 @@
     <div class="h-300 shadow-sm  rounded-xl items-center m-8 shadow-black justify-center flex-1 ">
         <div class="grid grid-cols-2 p-10 place-content-center gap-12">
             <div class=" w-400">
-                <img src="{{ asset('Binuskemanggisan.avif') }}" class="rounded-xl " alt="">
+                <img src="{{ asset('binuskemanggisan.avif') }}" class="rounded-xl " alt="">
             </div>
             <div class="">
-                <h1 class="font-bold text-4xl">BINUS @Bekasi</h1>
+                <h1 class="font-bold text-4xl">BIPRES @Bekasi</h1>
 <div class="mb-2 mt-2">
-                    <a href="https://maps.app.goo.gl/xL9cmEdVRvX8sEWd6" class="text-black text-md text-decoration-none">Kampus Binus Bekasi, Jalan Lingkar Boulevar Blok WA No.1 Summarecon Bekasi, Kota Bks, Jawa Barat</a>
+                    <a href="https://maps.app.goo.gl/xL9cmEdVRvX8sEWd6" class="text-black text-md text-decoration-none">Kampus BIPRES Bekasi, Jalan Lingkar Boulevar Blok WA No.1 Summarecon Bekasi, Kota Bks, Jawa Barat</a>
 
                 </div>                <p class="font-thin text-sm">Kampus ini tersebar di Kampus Anggrek, Kampus Syahdan, Kampus Kijang, dan
-                   BINUS @Bekasi hadir untuk menjawab kebutuhan masyarakat Kota Bekasi dan sekitarnya dengan pendidikan bertaraf dunia yang tersebar di seluruh Indonesia. Kampus ini terus didorong dan diimplementasikan sesuai dengan cita-cita para perintis BINA NUSANTARA untuk membangun dan membina nusantara melalui pendidikan dan teknologi.</p>
+                   BIPRES @Bekasi hadir untuk menjawab kebutuhan masyarakat Kota Bekasi dan sekitarnya dengan pendidikan bertaraf dunia yang tersebar di seluruh Indonesia. Kampus ini terus didorong dan diimplementasikan sesuai dengan cita-cita para perintis BINA NUSANTARA untuk membangun dan membina nusantara melalui pendidikan dan teknologi.</p>
                 <h1 class="font-bold text-2xl mt-5">
                     FAKULTAS
                 </h1>
@@ -466,7 +465,7 @@
         </div>
         <div class="bg-white text-center mt-5">
             <h1 class="text-5xl font-bold">PROGRAMS</h1>
-            <p class="font-normal text-xl">BINUS @Bekasi</p>
+            <p class="font-normal text-xl">BIPRES @Bekasi</p>
         </div>
         <div class="grid grid-cols-3 place-content-center p-5">
             <div class="p-3 h-100 border-r-2 border-gray-300">
@@ -539,7 +538,7 @@
 
     <div class="bg-[#007aa5] h-80 justify-center flex flex-col items-center">
         <div class="">
-            <h1 class="text-center text-white text-5xl w-180 font-normal">SUDAH SIAP MENJADI BAGIAN DARI <b>BINUS
+            <h1 class="text-center text-white text-5xl w-180 font-normal">SUDAH SIAP MENJADI BAGIAN DARI <b>BIPRES
                     UNIVERSITY?</b></h1>
         </div>
         <a href="" class="bg-orange-500 mt-7 p-3 w-60
@@ -552,32 +551,32 @@
         <div class="max-w-7xl mx-auto px-6 py-12 grid md:grid-cols-2 gap-10">
 
             <div>
-                <h1 class="font-bold text-3xl mb-4">GABUNG BINUS</h1>
-                <p class="text-lg">BINUS UNIVERSITY</p>
+                <h1 class="font-bold text-3xl mb-4">GABUNG BIPRES</h1>
+                <p class="text-lg">BIPRES UNIVERSITY</p>
                 <p class="text-lg mb-4">HIGHER EDUCATION</p>
                 <p class="text-sm text-green-200">
-                    Wujudkan masa depan pendidikan terbaik bersama BINUS Higher Education.
+                    Wujudkan masa depan pendidikan terbaik bersama BIPRES Higher Education.
                 </p>
             </div>
 
             <div>
                 <h2 class="font-semibold text-xl mb-4">Locations</h2>
                 <ul class="grid grid-cols-2 gap-2 text-green-200 text-sm">
-                    <li>BINUS @Kemanggisan</li>
-                    <li>BINUS @Alam Sutera</li>
-                    <li>BINUS @Senayan</li>
-                    <li>BINUS @Bekasi</li>
-                    <li>BINUS @Bandung</li>
-                    <li>BINUS @Malang</li>
-                    <li>BINUS @Semarang</li>
-                    <li>BINUS @Medan</li>
+                    <li>BIPRES @Kemanggisan</li>
+                    <li>BIPRES @Alam Sutera</li>
+                    <li>BIPRES @Senayan</li>
+                    <li>BIPRES @Bekasi</li>
+                    <li>BIPRES @Bandung</li>
+                    <li>BIPRES @Malang</li>
+                    <li>BIPRES @Semarang</li>
+                    <li>BIPRES @Medan</li>
                 </ul>
             </div>
 
         </div>
 
         <div class="border-t border-green-700 py-5 text-center text-sm text-green-300">
-            © {{ date('Y') }} BINUS Higher Education. All rights reserved.
+            © {{ date('Y') }} BIPRES Higher Education. All rights reserved.
         </div>
 
     </footer>
